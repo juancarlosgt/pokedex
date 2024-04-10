@@ -108,6 +108,7 @@ main {
 }
 #fighting{
     background-color: var(--type-fighting);
+    color: white;
 }
 #fire{
     background-color: var(--type-fire);
@@ -129,6 +130,7 @@ main {
 }
 #normal{
     background-color: var(--type-normal);
+    color: white;
 }
 #poison{
     background-color: var(--type-poison);
@@ -136,9 +138,11 @@ main {
 }
 #psychic{
     background-color: var(--type-psychic);
+    color: white;
 }
 #rock{
     background-color: var(--type-rock);
+    color: white;
 }
 #steel{
     background-color: var(--type-steel);
