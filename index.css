@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+:root{
+    --type-bug: #9fdf7a;
+    --type-dark: #443634;
+    --type-dragon: #b465e9;
+    --type-electric: #fffb03;
+    --type-fairy: #eea8d3;
+    --type-fighting: #853131;
+    --type-fire: #f77f10;
+    --type-flying: #baf0f0;
+    --type-ghost: #8f76b1;
+    --type-grass: #62b632;
+    --type-ground: #cfc750;
+    --type-ice: #3ef3db;
+    --type-normal: #9c9c9c;
+    --type-poison: #5f1f85;
+    --type-psychic: #d64a80;
+    --type-rock: #8f8638;
+    --type-steel: #999999;
+    --type-water: #3287f7;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +27,7 @@
     font-family: "Nunito", sans-serif;
 }
 
-body {
+body {    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +47,7 @@ main {
 
 .pokemon {
     width: 300px;
-    height: 400px;
+    height: 450px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -57,4 +77,72 @@ main {
     max-width: 300px;
     display: flex;
     justify-content: center;
+}
+.tipos{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.tipo{
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+#bug{
+    background-color: var(--type-bug);
+}
+#dark{
+    background-color: var(--type-dark);
+}
+#dragon{
+    background-color: var(--type-dragon);
+}
+#electric{
+    background-color: var(--type-electric);
+}
+#fairy{
+    background-color: var(--type-fairy);
+}
+#fighting{
+    background-color: var(--type-fighting);
+}
+#fire{
+    background-color: var(--type-fire);
+}
+#flying{
+    background-color: var(--type-flying);
+}
+#ghost{
+    background-color: var(--type-ghost);
+}
+#grass{
+    background-color: var(--type-grass);
+}
+#ground{
+    background-color: var(--type-ground);
+}
+#ice{
+    background-color: var(--type-ice);
+}
+#normal{
+    background-color: var(--type-normal);
+}
+#poison{
+    background-color: var(--type-poison);
+    color: white;
+}
+#psychic{
+    background-color: var(--type-psychic);
+}
+#rock{
+    background-color: var(--type-rock);
+}
+#steel{
+    background-color: var(--type-steel);
+}
+#water{
+    background-color: var(--type-water);
 }

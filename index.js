@@ -3,18 +3,16 @@ let URL = "https://pokeapi.co/api/v2/pokemon/"
 const requests = [];
 for (let i = 1; i <= 151; i++) {
     requests.push(fetch(URL + i).then((response) => response.json()));
-           
+
 }
 Promise.all(requests)
     .then((responses) => {
         responses.sort((a, b) => a.id - b.id);
         responses.forEach(data => mostrar(data));
-        console.log("XD")
     });
 
 
 function mostrar(data) {
-    console.log(data.name)
     const div = document.createElement("div");
     div.classList.add("pokemon");
     div.innerHTML = `
@@ -24,6 +22,10 @@ function mostrar(data) {
                 <div class="info">                
                     <p class="id">#${data.id}</p>
                     <p class="nombre">${data.name}</p>
+                    <div class="tipos"> 
+                        <p class="tipo" id="${data.types[0].type.name}">${data.types[0].type.name}</p>  
+                        ${data.types[1] ? `<p class="tipo" id="${data.types[1].type.name}">${data.types[1].type.name}</p>` : ''}   
+                    </div>               
                 </div>
     `;
     lista.append(div);
