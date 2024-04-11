@@ -42,8 +42,7 @@ botones.forEach(boton => boton.addEventListener("click", (event) => {
     poke.forEach(data => {
         let tipo_lista = data.types.length == 2 ?botonID == data.types[0].type.name || botonID == data.types[1].type.name: botonID == data.types[0].type.name;        
         if (tipo_lista || botonID=="ver-todos") {
-            mostrar(data);
-            console.log(data)
+            mostrar(data);            
         }        
     })
 
