@@ -48,8 +48,6 @@ botones.forEach(boton => boton.addEventListener("click", (event) => {
     })
 
 }))
-<<<<<<< HEAD
-=======
 search.addEventListener("input",function(){
     let text = event.target.value;
     lista.innerHTML = ''
@@ -59,4 +57,3 @@ search.addEventListener("input",function(){
         }        
     })
 })
->>>>>>> 2e2019b4b6107ef0b5e1de5194b4c4174ee783bb
