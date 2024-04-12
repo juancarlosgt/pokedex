@@ -1,5 +1,6 @@
 const lista = document.querySelector("#todos #lista")
 const botones = document.querySelectorAll(".btn-header")
+const search = document.getElementById("busqueda")
 let URL = "https://pokeapi.co/api/v2/pokemon/"
 const requests = [];
 const poke = [];
@@ -47,3 +48,12 @@ botones.forEach(boton => boton.addEventListener("click", (event) => {
     })
 
 }))
+search.addEventListener("input",function(){
+    let text = event.target.value;
+    lista.innerHTML = ''
+    poke.forEach(data => {
+        if (data.name.includes(text)) {
+            mostrar(data);            
+        }        
+    })
+})
