@@ -67,21 +67,3 @@ toggleNavBtn.addEventListener("click", function() {
     nav.classList.toggle("active");   
     flecha.classList.toggle("active");
 });
-
-
-// const botonVolverArriba = document.getElementById('volver-arriba');
-
-// window.addEventListener('scroll', function() {
-//     if (window.scrollY > 100) { // Mostrar el botón cuando se haya hecho scroll hacia abajo
-//         botonVolverArriba.style.display = 'block';
-//     } else {
-//         botonVolverArriba.style.display = 'none';
-//     }
-// });
-
-// botonVolverArriba.addEventListener('click', function() {
-//     window.scrollTo({
-//         top: 0,
-//         behavior: 'smooth' // Desplazamiento suave hacia arriba
-//     });
-// });
