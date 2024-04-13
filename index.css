@@ -26,26 +26,20 @@
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
 }
-ul {
-    list-style-type: none;
-}
-
 button {
     background-color: transparent;
     border: 0;
     border-radius: 0;
 }
+ul {
+    list-style-type: none;    
+}
 header {
     padding-block: 1rem;
     box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #d6d4d4; 
+    background-color: #f12929dc;  
     padding: 10px 20px; 
-    z-index: 1000;
-    margin-bottom: 15%;
+    position: relative;
 }
 .search {
     position: relative;
@@ -53,6 +47,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 .search-input {
     padding: 10px;
@@ -62,6 +57,7 @@ header {
     width: 100%;
     max-width: 500px;
     font-size: 16px;
+    margin: 10px;
 }
 .search-input:focus {
     outline: none;
@@ -71,24 +67,28 @@ header {
 .nav-container{
     margin-top: 20px;
 }
-.nav {
+.nav-list {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    
+}
+.nav {
+    display: none; 
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
     padding-inline: 2rem;
     max-width: 1000px;
     margin: 0 auto;
-}
-.nav-list {
+} 
+.nav.active{
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5rem;
 }
 
+
 .btn-header {
-    background-color: var(--clr-gray);
     padding: .5rem;
     border-radius: 100vmax;
     cursor: pointer;
@@ -96,32 +96,27 @@ header {
     font-weight: 600;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
     transition: .2s;
+    border: 2px solid transparent;
 }
-
 .btn-header:hover {
     transform: scale(1.1);
     box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+    border-color: white;
 }
-body {    
-    
+main {    
+
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: #f0f0f0;    
+    background-image: url(Pokeball-wallpaper.jpg);
+    background-size: 120%;
 } 
-
-main {
-    margin-top: 12%;
-    padding: 2rem;    
-}
-
 .ALL {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .pokemon {
     width: 300px;
     height: 450px;
@@ -138,7 +133,7 @@ main {
     font-weight: bold;
     margin-top: 20px;
 }
-  
+
 .nombre {
     font-size: 20px;
     margin-top: 10px;
@@ -165,6 +160,19 @@ main {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     padding: 5px 10px;
     border-radius: 20px;
+}
+#flecha{
+    max-width: 1.5rem;    
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s;
+    opacity: 0.8;
+}
+#flecha.active{
+    transform: rotate(180deg);
+}
+#ver-todos{
+    background-color: gray;
+    color: white;
 }
 #bug{
     background-color: var(--type-bug);

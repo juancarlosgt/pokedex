@@ -1,6 +1,11 @@
-const lista = document.querySelector("#todos #lista")
+const lista = document.querySelector("#lista")
 const botones = document.querySelectorAll(".btn-header")
 const search = document.getElementById("busqueda")
+search.value = "";
+const toggleNavBtn = document.querySelector(".toggle-nav-btn");
+const nav = document.querySelector(".nav");
+const flecha = document.getElementById("flecha")
+
 let URL = "https://pokeapi.co/api/v2/pokemon/"
 const requests = [];
 const poke = [];
@@ -40,6 +45,7 @@ function mostrar(data) {
 botones.forEach(boton => boton.addEventListener("click", (event) => {
     const botonID = event.currentTarget.id;
     lista.innerHTML = '';
+    search.value="";
     poke.forEach(data => {
         let tipo_lista = data.types.length == 2 ?botonID == data.types[0].type.name || botonID == data.types[1].type.name: botonID == data.types[0].type.name;        
         if (tipo_lista || botonID=="ver-todos") {
@@ -48,8 +54,6 @@ botones.forEach(boton => boton.addEventListener("click", (event) => {
     })
 
 }))
-<<<<<<< HEAD
-=======
 search.addEventListener("input",function(){
     let text = event.target.value;
     lista.innerHTML = ''
@@ -59,4 +63,25 @@ search.addEventListener("input",function(){
         }        
     })
 })
->>>>>>> 2e2019b4b6107ef0b5e1de5194b4c4174ee783bb
+toggleNavBtn.addEventListener("click", function() {    
+    nav.classList.toggle("active");   
+    flecha.classList.toggle("active");
+});
+
+
+// const botonVolverArriba = document.getElementById('volver-arriba');
+
+// window.addEventListener('scroll', function() {
+//     if (window.scrollY > 100) { // Mostrar el botón cuando se haya hecho scroll hacia abajo
+//         botonVolverArriba.style.display = 'block';
+//     } else {
+//         botonVolverArriba.style.display = 'none';
+//     }
+// });
+
+// botonVolverArriba.addEventListener('click', function() {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth' // Desplazamiento suave hacia arriba
+//     });
+// });
