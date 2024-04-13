@@ -55,7 +55,7 @@ botones.forEach(boton => boton.addEventListener("click", (event) => {
 
 }))
 search.addEventListener("input",function(){
-    let text = search.value;
+    let text = search.value.toLowerCase();
     lista.innerHTML = ''
     poke.forEach(data => {
         if (data.name.includes(text)) {
