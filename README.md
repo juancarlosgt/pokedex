@@ -1,4 +1,4 @@
 # **Pokedex**
 Lista de los Pokemon de Kanto (primera generacion) usando HTML, CSS y JavaScript<br>
 ## Creditos
-Este pequeño proyecto es hecho gracias a la [POKEAPI](https://pokeapi.co/docs/v2)
+Este proyecto es hecho usando la [POKEAPI](https://pokeapi.co/docs/v2)

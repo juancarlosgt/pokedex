@@ -1,11 +1,12 @@
 const lista = document.querySelector("#lista")
 const botones = document.querySelectorAll(".btn-header")
 const search = document.getElementById("busqueda")
-search.value = "";
 const toggleNavBtn = document.querySelector(".toggle-nav-btn");
 const nav = document.querySelector(".nav");
-const flecha = document.getElementById("flecha")
+const flecha = document.getElementById("flecha");
+const volver = document.getElementById("volver");
 
+search.value = "";
 let URL = "https://pokeapi.co/api/v2/pokemon/"
 const requests = [];
 const poke = [];
@@ -55,7 +56,7 @@ botones.forEach(boton => boton.addEventListener("click", (event) => {
 
 }))
 search.addEventListener("input",function(){
-    let text = event.target.value;
+    let text = search.value.toLowerCase();
     lista.innerHTML = ''
     poke.forEach(data => {
         if (data.name.includes(text)) {
@@ -67,3 +68,13 @@ toggleNavBtn.addEventListener("click", function() {
     nav.classList.toggle("active");   
     flecha.classList.toggle("active");
 });
+window.addEventListener("scroll",function() {
+    if (window.scrollY > 20 || document.documentElement.scrollTop > 20) {
+      volver.classList.add('show');
+    } else {
+      volver.classList.remove('show');
+    }
+  })
+  volver.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });    
+  });
